@@ -21,18 +21,15 @@
 
     // Add your component here :)
 
-    const BusinessCard=(props)=>{
+    const Businesscard=(props)=>{
       console.log(props);
     return(
       <div className="Card">
-        <div className="image">
-            <p>image</p>
-        </div>
         <div className="information">
-            <p>{props.name}</p>
-            <p>{props.email}</p>
-            <p>{props.phone}</p>
-            <p>{props.children}</p>
+            <p>name:{props.name}</p>
+            <p>email:{props.email}</p>
+            <p>phone:{props.phone}</p>
+            <p>children:{props.children}</p>
         </div>
       </div>
           )
@@ -48,9 +45,10 @@
 
     const app = (
       <>
-        <BusinessCard name: "Deyanira Paola Mendoza Armas">
+        <Businesscard name:"Deyanira Paola Mendoza Armas", email:"pao.9874@hotmail.com",phone:"7751449832">
         
-        Soy estudiante de Itic, estoy estudiando el 6to semestre de ITIc. Se programar en c++, c#, estoy aprendiendo JS.
+        Soy estudiante de Itic, estoy estudiando el 6to semestre de ITIc. Se programar en c++, c#, 
+        estoy aprendiendo JS. Tengo B2 en ingles.
         </Businesscard>
       </>
     );
