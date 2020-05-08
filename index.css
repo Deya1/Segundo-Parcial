@@ -1,0 +1,8 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.Card{
+	display: flex;
+	border: 25px solid red;
+}

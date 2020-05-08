@@ -1,3 +1,6 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
 <body>
   <div id="root"></div>
 
@@ -18,9 +21,37 @@
 
     // Add your component here :)
 
+    const BusinessCard=(props)=>{
+      console.log(props);
+    return(
+      <div className="Card">
+        <div className="image">
+            <p>image</p>
+        </div>
+        <div className="information">
+            <p>{props.name}</p>
+            <p>{props.email}</p>
+            <p>{props.phone}</p>
+            <p>{props.children}</p>
+        </div>
+      </div>
+          )
+      }
+
+      Postcard.propTypes={
+      name:PropTypes.string.isRequired,
+      email:PropTypes.string.isRequired,
+      phone:PropTypes.string.isRequired,
+      headline:PropTypes.string.isRequired,
+      children: PropTypes.node,
+    }
+
     const app = (
       <>
-        {/* Display your business card here :) */}
+        <BusinessCard name: "Deyanira Paola Mendoza Armas">
+        
+        Soy estudiante de Itic, estoy estudiando el 6to semestre de ITIc. Se programar en c++, c#, estoy aprendiendo JS.
+        </Businesscard>
       </>
     );
 
