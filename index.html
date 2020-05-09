@@ -1,6 +1,7 @@
 <head>
   <link rel="stylesheet" type="text/css" href="index.css">
 </head>
+
 <body>
   <div id="root"></div>
 
@@ -21,21 +22,21 @@
 
     // Add your component here :)
 
-    const Businesscard=(props)=>{
+    const Card=(props)=>{
       console.log(props);
     return(
       <div className="Card">
         <div className="information">
-            <p>name:{props.name}</p>
-            <p>email:{props.email}</p>
-            <p>phone:{props.phone}</p>
-            <p>children:{props.children}</p>
+            <p>name: {props.name}</p>
+            <p>email: {props.email}</p>
+            <p>phone: {props.phone}</p>
+            <p>headline: {props.children}</p>
         </div>
       </div>
           )
-      }
+  }
 
-      Postcard.propTypes={
+  Card.propTypes={
       name:PropTypes.string.isRequired,
       email:PropTypes.string.isRequired,
       phone:PropTypes.string.isRequired,
@@ -45,12 +46,17 @@
 
     const app = (
       <>
-        <Businesscard name:"Deyanira Paola Mendoza Armas", email:"pao.9874@hotmail.com",phone:"7751449832">
-        
-        Soy estudiante de Itic, estoy estudiando el 6to semestre de ITIc. Se programar en c++, c#, 
-        estoy aprendiendo JS. Tengo B2 en ingles.
-        </Businesscard>
-      </>
+        <Card name="Deyanira Paola"
+        email="pao.9874@hotmail.com"
+        phone="7751449832"
+        >
+        Mi nombre es Deyanira Paola Mendoza Armas, estudiante de 
+        6to semestre de la carrera de ITIC. Se programar en 
+        c++, c#,php. Además, tengo conocimientos en html, 
+        css y bases de datos.
+        Finalmente soy una persona responsable y perseverante.
+       </Card>
+       </>
     );
 
     ReactDOM.render(app, rootElement);
